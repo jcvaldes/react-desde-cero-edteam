@@ -1,6 +1,9 @@
 # Edteam grid styles
 https://ux.ed.team/cards.html
 
+# Librerias
+yarn add prop-types
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
