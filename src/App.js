@@ -1,4 +1,7 @@
 import { Curso } from './components/Curso';
+import Formulario from './components/Formulario';
+import Formulario1 from './components/Formulario1';
+import { Hero } from './components/Hero';
 import './styles/styles.scss';
 // const App = () => <h1>Hola Mundo</h1>
 const cursos = [
@@ -17,24 +20,9 @@ const cursos = [
 ];
 const App = () => (
   <>
-    <div className="main-banner img-container l-section" id="main-banner">
-      <div className="ed-grid lg-grid-6">
-        <div className="lg-cols-4 lg-x-2">
-          <img
-            className="main-banner__img"
-            src="https://wallpaperset.com/w/full/a/4/6/49091.jpg"
-            alt="banner"
-          />
-          <div className="main-banner__data s-center">
-            <p className="t2 s-mb-0">Cursos de Devkingos</p>
-            <p> Tu futuro te está esperando</p>
-            <a href="https://devkingos.com" className="button">
-              Subscribirse
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Hero />
+    <Formulario name="EDTeam"/>
+
     <div className="ed-grid m-grid-3">
       {cursos.map((c) => (
         <Curso key={c.title}
