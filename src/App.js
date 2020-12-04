@@ -1,4 +1,5 @@
 import { Curso } from './components/Curso';
+import CursoGrid from './components/CursoGrid';
 import Formulario from './components/Formulario';
 import Formulario1 from './components/Formulario1';
 import { Hero } from './components/Hero';
@@ -23,7 +24,7 @@ const App = () => (
     <Hero />
     <Formulario name="EDTeam"/>
 
-    <div className="ed-grid m-grid-3">
+    {/* <div className="ed-grid m-grid-3">
       {cursos.map((c) => (
         <Curso key={c.title}
           title={c.title}
@@ -32,7 +33,8 @@ const App = () => (
           profesor={c.profesor}
         />
       ))}
-    </div>
+    </div> */}
+    <CursoGrid ></CursoGrid>
   </>
 );
 
