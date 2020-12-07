@@ -20,4 +20,4 @@ const UserGrid = ({ users }) => {
   )
 };
 
-export default withLoader("users", UserGrid);
+export default  withLoader("users")(UserGrid) 

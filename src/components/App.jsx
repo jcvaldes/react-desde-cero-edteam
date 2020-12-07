@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import History from './Pages/History';
 import Home from './Pages/Home';
 import Users from './Pages/Users';
+import UploadFiles from './Pages/UploadFiles';
 // const App = () => <h1>Hola Mundo</h1>
 // const courses = [
 //   {
@@ -46,6 +47,7 @@ const App = () => (
         <Route path="/history/:valor" component={History} />
         <Route path="/history" component={History} />
         <Route path="/users" component={Users} />
+        <Route path="/upload-files" component={UploadFiles} />
         <Route
           path="/form"
           exact

@@ -1,6 +1,7 @@
 import React, { Component } from "react"
-
-const withLoader = (propValue, WrappedComponent) => {
+// funcion que devuelve otra funcion
+// const withLoader = (propValue, WrappedComponent) => {
+  const withLoader = (propValue) => (WrappedComponent) => {
     return class WithLoader extends Component {
 
         render() {
