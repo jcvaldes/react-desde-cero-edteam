@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-export const CursoCard = ({ id, titulo, image, price, profesor }) => {
+export const CourseCard = ({ id, titulo, image, price, teacher }) => {
   return (
     <article className="card">
       <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
-        <Link to={`/cursos/${id}`}>
+        <Link to={`/courses/${id}`}>
           <img src={image} alt={titulo} />
         </Link>
       </div>
@@ -17,11 +17,11 @@ export const CursoCard = ({ id, titulo, image, price, profesor }) => {
               <div className="circle img-container">
                 <img
                   src="https://ux.ed.team/img/profesor-2.jpg"
-                  alt={profesor}
+                  alt={teacher}
                 />
               </div>
             </div>
-            <span className="small">Profesor: {profesor}</span>
+            <span className="small">Profesor: {teacher}</span>
           </div>
         </div>
         <div className="s-main-center">
@@ -33,15 +33,15 @@ export const CursoCard = ({ id, titulo, image, price, profesor }) => {
     </article>
   );
 };
-CursoCard.propTypes = {
+CourseCard.propTypes = {
   title: PropTypes.string,
   image: PropTypes.string,
   price: PropTypes.number,
-  profesor: PropTypes.string,
+  teacher: PropTypes.string,
 };
-CursoCard.defaultProps = {
+CourseCard.defaultProps = {
   title: 'No se encontró titulo',
   image: '',
   price: 0,
-  profesor: '',
+  teacher: '',
 };

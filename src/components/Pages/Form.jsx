@@ -1,27 +1,27 @@
 import React, { Component } from 'react';
 
 // class Formulario extends React.Component {
-class Formulario extends Component {
+class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      nombre: '',
+      name: '',
       email: '',
-      fecha: new Date()
+      date: new Date()
     };
-    this.cambiarNombre = this.cambiarNombre.bind(this);
-    this.cambiarFecha = this.cambiarFecha.bind(this)
+    this.changeName = this.changeName.bind(this);
+    this.changeDate = this.changeDate.bind(this)
     // Logica antes de renderizar el componente se hace aca
     // Ya no se usa componentWillMount
   }
-  cambiarNombre(e) {
+  changeName(e) {
     this.setState({
-      nombre: e.target.value,
+      name: e.target.value,
     });
   }
-  cambiarFecha() {
+  changeDate() {
     this.setState({
-      fecha: new Date()
+      date: new Date()
     })
   }
   render() {
@@ -31,11 +31,11 @@ class Formulario extends Component {
       <div className="ed-grid">
         <h4> Fecha actual: { Math.ceil(this.state.fecha / 1000 )} </h4>
         <h1>Formulario {this.props.name}</h1>
-        <form id="elemento">
+        <form id="form-element">
           <div className="ed-grid m-grid-3">
             <div className="form__item">
               <label>Nombre completo</label>
-              <input type="text" onChange={this.cambiarNombre} />
+              <input type="text" onChange={this.changeName} />
             </div>
             <div className="form__item">
               <label>Email</label>
@@ -53,7 +53,7 @@ class Formulario extends Component {
             </div>
           </div>
         </form>
-        {`tu nombre es: ${this.state.nombre}`}
+        {`tu nombre es: ${this.state.name}`}
         <br />
         {`tu email es: ${this.state.email}`}
       </div>
@@ -61,11 +61,11 @@ class Formulario extends Component {
   }
   // Se ejecuta luego del render y se puede manipular el DOM
   componentDidMount() {
-    // let elem = document.getElementById('elemento')
+    // let elem = document.getElementById('form-element')
     // console.log(elem); // -->nul
     // console.log('Componente montado')
     this.intervaloFecha = setInterval(() => {
-      this.cambiarFecha()
+      this.changeDate()
       console.log(new Date());
     }, 1000)
   }
@@ -82,4 +82,4 @@ class Formulario extends Component {
   }
 
 }
-export default Formulario;
+export default Form;

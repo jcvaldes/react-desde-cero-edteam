@@ -34,7 +34,7 @@ const cursos = [
     profesor: 'Beto Quiroga',
   },
 ];
-const Curso = ({ match }) => {
+const Course = ({ match }) => {
   const cursoActual = cursos.find(c => c.id === parseInt(match.params.id));
 
   return (
@@ -52,10 +52,10 @@ const Curso = ({ match }) => {
             <p className="m-cols-2">Profesor: {cursoActual.profesor}</p>
             </>
           )
-          : <h1>Curso no existe</h1>
+          : <h1>Course no existe</h1>
       }
 
     </div>
   );
 };
-export default Curso;
+export default Course;

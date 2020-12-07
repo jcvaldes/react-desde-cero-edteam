@@ -4,6 +4,17 @@ https://ux.ed.team/cards.html
 # Librerias
 yarn add prop-types
 
+
+# Metodologia Atomic Design
+https://atomicdesign.bradfrost.com/chapter-2/
+
+
+# Apis Fake
+
+https://jsonplaceholder.typicode.com/
+
+https://any-api.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

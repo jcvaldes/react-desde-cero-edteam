@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Hero = () => {
+const Hero = () => {
   return (
     <div className="main-banner img-container l-section" id="main-banner">
       <div className="ed-grid lg-grid-6">
@@ -20,5 +20,6 @@ export const Hero = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
+export default Hero
