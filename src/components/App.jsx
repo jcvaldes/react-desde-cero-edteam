@@ -1,6 +1,6 @@
 import Header from './Organisms/Header';
 import Course  from './Pages/Course';
-import CourseGrid from './Organisms/CourseGrid';
+import Courses from './Pages/Courses';
 import Form from './Pages/Form';
 import '../styles/styles.scss';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -42,7 +42,7 @@ const App = () => (
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/courses/:id" component={Course} />
-        <Route path="/courses" component={CourseGrid} />
+        <Route path="/courses" component={Courses} />
         <Route path="/history/:valor" component={History} />
         <Route path="/history" component={History} />
         <Route path="/users" component={Users} />
