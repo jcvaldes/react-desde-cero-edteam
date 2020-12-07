@@ -11,6 +11,8 @@ const MainMenu = () => {
             <li><NavLink to="/form" activeClassName="activo"> Formulario </NavLink></li>
             <li><NavLink to="/history/algo?q=frontend#1" activeClassName="activo"> Historial </NavLink></li>
             <li><NavLink to="/users" activeClassName="activo"> Usuarios </NavLink></li>
+            <li><NavLink to="/upload-files" activeClassName="activo"> Archivos </NavLink></li>
+
         </ul>
       </nav>
       <div className="main-menu-toggle to-l" id="main-menu-toggle"></div>
