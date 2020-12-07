@@ -1,28 +1,27 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 const withFileUpload = (WrappedComponent) => {
   return class WithFileUpload extends Component {
     constructor(props) {
-      super(props);
-      this.state = { files: [] };
-      this.fileReader = new FileReader();
-      this.addFile = this.addFile.bind(this);
-      this.appendFile = this.appendFile.bind(this);
+      super(props)
+      this.state = { files: [] }
+      this.fileReader = new FileReader()
+      this.addFile = this.addFile.bind(this)
+      this.appendFile = this.appendFile.bind(this)
     }
     addFile(e) {
-      const files = e.target.files;
-      this.fileReader.readAsDataURL(files[0]);
+      const files = e.target.files
+      this.fileReader.readAsDataURL(files[0])
     }
     appendFile() {
-      debugger
       this.setState({
         files: [...this.state.files, this.fileReader.result],
-      });
+      })
     }
     componentDidMount() {
-      this.fileReader.addEventListener('load', this.appendFile);
+      this.fileReader.addEventListener('load', this.appendFile)
     }
     componentWillUnmount() {
-      this.fileReader.removeEventListener('load', this.appendFile);
+      this.fileReader.removeEventListener('load', this.appendFile)
     }
     render() {
       return (
@@ -31,9 +30,9 @@ const withFileUpload = (WrappedComponent) => {
           addFile={this.addFile}
           files={this.state.files}
         />
-      );
+      )
     }
-  };
-};
+  }
+}
 
-export default withFileUpload;
+export default withFileUpload
