@@ -12,7 +12,7 @@ const CourseGrid = ({ courses }) => {
           <CourseCard
             key={c.id}
             id={c.id}
-            titulo={c.titulo}
+            title={c.title}
             price={c.price}
             image={c.image}
             teacher={c.teacher}
