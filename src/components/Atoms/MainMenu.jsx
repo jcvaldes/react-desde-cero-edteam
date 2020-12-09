@@ -12,6 +12,7 @@ const MainMenu = () => {
             <li><NavLink to="/history/algo?q=frontend#1" activeClassName="activo"> Historial </NavLink></li>
             <li><NavLink to="/users" activeClassName="activo"> Usuarios </NavLink></li>
             <li><NavLink to="/upload-files" activeClassName="activo"> Archivos </NavLink></li>
+            <li><NavLink to="/posts" activeClassName="activo"> Posts </NavLink></li>
 
         </ul>
       </nav>

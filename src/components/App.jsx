@@ -8,6 +8,7 @@ import History from './Pages/History';
 import Home from './Pages/Home';
 import Users from './Pages/Users';
 import UploadFiles from './Pages/UploadFiles';
+import Posts from './Pages/Posts';
 // const App = () => <h1>Hola Mundo</h1>
 // const courses = [
 //   {
@@ -48,6 +49,7 @@ const App = () => (
         <Route path="/history" component={History} />
         <Route path="/users" component={Users} />
         <Route path="/upload-files" component={UploadFiles} />
+        <Route path="/posts" component={Posts} />
         <Route
           path="/form"
           exact

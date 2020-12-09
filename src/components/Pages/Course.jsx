@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import React, { useState } from 'react'
+import useCourse from '../CustomHooks/useCourse'
 
 const Course = ({ match }) => {
-  const [course, setCourse] = useState({})
+  // const [course, setCourse] = useState({})
   const [comment, setComment] = useState('Sin comentarios')
   // se desencadena infinitamente
   // useEffect(() => {
@@ -11,15 +11,15 @@ const Course = ({ match }) => {
   //     .get(`https://my-json-server.typicode.com/jcvaldes/apifake/courses/${ match.params.id }`)
   //     .then(resp  => setCourse(resp.data))
   // })
-  useEffect(() => {
-    // console.log('hola')
-    axios
-      .get(
-        `https://my-json-server.typicode.com/jcvaldes/apifake/courses/${match.params.id}`
-      )
-      .then((resp) => setCourse(resp.data))
-  }, [match.params.id]) //cuando se cambia de id entonces llama a la peticion
-
+  // useEffect(() => {
+  //   // console.log('hola')
+  //   axios
+  //     .get(
+  //       `https://my-json-server.typicode.com/jcvaldes/apifake/courses/${match.params.id}`
+  //     )
+  //     .then((resp) => setCourse(resp.data))
+  // }, [match.params.id]) //cuando se cambia de id entonces llama a la peticion
+  const course = useCourse(match.params.id)
   const addComment = (e) => setComment(e.target.value)
   // similar al componentDidMount
   const { title, teacher, image } = course
